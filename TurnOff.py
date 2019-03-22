@@ -1,8 +1,12 @@
+from time import sleep
+
 from digi.xbee.devices import XBeeDevice
+from digi.xbee.exception import TimeoutException
 
 PORT = "/dev/ttyUSB0"
 BAUD_RATE = 9600
 
+REMOTE_STATE_REQUEST = bytearray([0x01])
 DATA_TYPE = bytearray([0x03])
 REMOTE_NODE_ID = "Thermostat"
 
@@ -41,6 +45,26 @@ def crc_calc(data):
 
     return crc
 
+def get_remote_state(device, remote_device, data_to_send):
+    """
+    Get remote state
+    """
+    attempt = 0
+    while attempt < 10:
+        try:
+            print('Sending request for current state')
+
+            device.send_data(remote_device, data_to_send)
+
+            print("Successfully sent")
+
+            xbee_message = device.read_data(10) # Seconds
+            return xbee_message
+        except TimeoutException:
+            print("Timed out, try again")
+            attempt += 1
+            sleep(7)
+
 def main():
     print(" +--------------------------------------+")
     print(" | XBee send update to thermostat       |")
@@ -59,9 +83,7 @@ def main():
             exit(1)
 
         # Send request for state
-        print('Sending request for current state')
-        device.send_data(remote_device, bytearray([0x01]))
-        xbee_message = device.read_data(10) # Seconds
+        xbee_message = get_remote_state(device, remote_device, REMOTE_STATE_REQUEST)
         data = xbee_message.data[1:]
 
         # Verify CRC
