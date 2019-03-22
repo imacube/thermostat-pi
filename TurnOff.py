@@ -7,7 +7,7 @@ PORT = "/dev/ttyUSB0"
 BAUD_RATE = 9600
 
 REMOTE_STATE_REQUEST = bytearray([0x01])
-DATA_TYPE = bytearray([0x03])
+SEND_STATE = bytearray([0x03])
 REMOTE_NODE_ID = "Thermostat"
 
 crc_table = [
@@ -74,6 +74,26 @@ def get_remote_state(device, remote_device, data_to_send):
             sleep(7)
     return True, 'Failed to get remote state'
 
+def send_state(device, remote_device, data_to_send):
+    """
+    Send new state to remote
+    """
+    attempt = 0
+    while attempt < 10:
+        try:
+            print("Sending data to %s >> %s..." % (remote_device.get_64bit_addr(), data_to_send))
+            device.send_data(remote_device, data_to_send)
+
+            print("Successfully sent")
+
+            return None, None
+        except Exception:
+            print("Exception while trying to send state, trying again")
+            attempt += 1
+            sleep(7)
+    return None, "Failed to send state to remote"
+
+
 def main():
     print(" +--------------------------------------+")
     print(" | XBee send update to thermostat       |")
@@ -105,17 +125,14 @@ def main():
 
         crc = bytearray([crc_calc(settings_to_send)])
 
-        print('DATA_TYPE', DATA_TYPE)
+        print('DATA_TYPE', SEND_STATE)
         print('crc_calc', crc_calc(settings_to_send))
         print('crc', crc[0])
         print('settings_to_send', settings_to_send)
 
-        data_to_send = DATA_TYPE + crc + settings_to_send
+        data_to_send = SEND_STATE + crc + settings_to_send
 
-        print("Sending data to %s >> %s..." % (remote_device.get_64bit_addr(), data_to_send))
-        device.send_data(remote_device, data_to_send)
-
-        print("Success")
+        send_state(device, remote_device, data_to_send)
 
     finally:
         if device is not None and device.is_open():
