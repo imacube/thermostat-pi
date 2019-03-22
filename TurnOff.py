@@ -59,11 +59,20 @@ def get_remote_state(device, remote_device, data_to_send):
             print("Successfully sent")
 
             xbee_message = device.read_data(10) # Seconds
-            return xbee_message
+
+            # Verify CRC
+            if crc_calc(xbee_message.data[2:]) != xbee_message.data[1]:
+                print('CRC does not match! Try again...')
+                raise TimeoutException # Lazy so using this for now
+            else:
+                print('CRC match')
+
+            return xbee_message, None
         except TimeoutException:
             print("Timed out, try again")
             attempt += 1
             sleep(7)
+    return True, 'Failed to get remote state'
 
 def main():
     print(" +--------------------------------------+")
@@ -83,15 +92,11 @@ def main():
             exit(1)
 
         # Send request for state
-        xbee_message = get_remote_state(device, remote_device, REMOTE_STATE_REQUEST)
-        data = xbee_message.data[1:]
-
-        # Verify CRC
-        if crc_calc(data[1:]) != data[0]:
-            print('CRC does not match! Aborting...')
+        xbee_message, err = get_remote_state(device, remote_device, REMOTE_STATE_REQUEST)
+        if err:
+            print(err)
             exit(1)
-        else:
-            print('CRC match')
+        data = xbee_message.data[1:]
 
         temp_setting = data[2]
 
