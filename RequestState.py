@@ -107,6 +107,10 @@ def main():
         print('crc data', hex(xbee_message.data[1]))
         print('crc_calc', hex(crc_calc(xbee_message.data[2:])))
 
+        if crc_calc(xbee_message.data[2:]) != xbee_message.data[1]:
+            print('CRC does not match!')
+        else:
+            print('CRC match!')
     finally:
         if device is not None and device.is_open():
             device.close()
