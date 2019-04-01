@@ -120,7 +120,8 @@ def main():
 
         temp_setting = data[2]
 
-        heat = cool = fan_mode = 0
+        cool = fan_mode = 0
+        heat = 1
         settings_to_send = bytearray([temp_setting, heat, cool, fan_mode])
 
         crc = bytearray([crc_calc(settings_to_send)])

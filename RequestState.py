@@ -1,4 +1,7 @@
+from time import sleep
+
 from digi.xbee.devices import XBeeDevice
+from digi.xbee.exception import TimeoutException
 
 PORT = "/dev/ttyUSB0"
 BAUD_RATE = 9600
@@ -41,6 +44,26 @@ def crc_calc(data):
 
     return crc
 
+def get_remote_state(device, remote_device, data_to_send):
+    """
+    Get remote state
+    """
+    attempt = 0
+    while attempt < 10:
+        try:
+            print("Sending data to %s >> %s..." % (remote_device.get_64bit_addr(), DATA_TO_SEND))
+
+            device.send_data(remote_device, data_to_send)
+
+            print("Success")
+
+            xbee_message = device.read_data(10) # Seconds
+            return xbee_message
+        except TimeoutException:
+            print("Timed out, try again")
+            attempt += 1
+            sleep(7)
+
 def main():
     print(" +--------------------------------------+")
     print(" | XBee send request for current state  |")
@@ -58,13 +81,7 @@ def main():
             print("Could not find the remote device")
             exit(1)
 
-        print("Sending data to %s >> %s..." % (remote_device.get_64bit_addr(), DATA_TO_SEND))
-
-        device.send_data(remote_device, DATA_TO_SEND)
-
-        print("Success")
-
-        xbee_message = device.read_data(10) # Seconds
+        xbee_message = get_remote_state(device, remote_device, DATA_TO_SEND)
         data = xbee_message.data[2:]
 
         # struct thermostatStruct {
@@ -90,6 +107,10 @@ def main():
         print('crc data', hex(xbee_message.data[1]))
         print('crc_calc', hex(crc_calc(xbee_message.data[2:])))
 
+        if crc_calc(xbee_message.data[2:]) != xbee_message.data[1]:
+            print('CRC does not match!')
+        else:
+            print('CRC match!')
     finally:
         if device is not None and device.is_open():
             device.close()
