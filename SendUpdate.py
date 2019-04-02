@@ -66,8 +66,9 @@ def main():
         # } settings_struct;
 
         # Build message
-        temp_setting = 79
+        temp_setting = 74
         heat = cool = fan_mode = 0
+        cool = 1
         settings_to_send = bytearray([temp_setting, heat, cool, fan_mode])
 
         crc = bytearray([crc_calc(settings_to_send)])
