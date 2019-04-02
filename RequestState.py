@@ -93,8 +93,14 @@ def main():
         #     uint8_t _cool_relay; // On or Off?
         #     uint8_t _fan_mode; // Auto or On?
         #     uint8_t _fan_relay; // On or Off?
+        #     unsigned long _run_stop; // When the system turned off, in milliseconds
+        #     unsigned long _run_start; // When the system turned on, in milliseconds
         #   } thermostat_struct;
 
+        # print('data len', len(data))
+        # print('start', data[8:12].hex())
+        # print('start', data[12:16].hex())
+        # print(data)
         print('Temperature', data[0])
         print('Temperature setting', data[1])
         print('Setting heat', False if data[2] == 0 else True)
@@ -103,6 +109,8 @@ def main():
         print('Setting cool relay', False if data[5] == 0 else True)
         print('Setting fan', False if data[6] == 0 else True)
         print('Setting fan relay', False if data[7] == 0 else True)
+        print('Run stop', int.from_bytes(data[8:12], byteorder='little'))
+        print('Run start', int.from_bytes(data[12:16], byteorder='little'))
 
         print('crc data', hex(xbee_message.data[1]))
         print('crc_calc', hex(crc_calc(xbee_message.data[2:])))
