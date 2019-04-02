@@ -119,9 +119,10 @@ def main():
         data = xbee_message.data[1:]
 
         temp_setting = data[2]
+        temp_setting = 74
 
-        cool = fan_mode = 0
-        heat = 1
+        cool = heat = fan_mode = 0
+        cool = 1
         settings_to_send = bytearray([temp_setting, heat, cool, fan_mode])
 
         crc = bytearray([crc_calc(settings_to_send)])
