@@ -144,11 +144,26 @@ def main():
             exit(1)
         data = xbee_message.data[1:]
 
-        temp_setting = data[2]
-        temp_setting = 74
+        current_temp = data[2]
 
-        cool = heat = fan_mode = 0
-        cool = 1
+        cool = heat = fan_mode = 0 # Default, nothing on
+        temp_setting = 73
+
+        if current_temp >= 73:
+            cool = 1
+            temp_setting = 74
+        elif current_temp < 73:
+            heat = 1
+            temp_setting = 73
+
+        print('current_temp', current_temp)
+        print('temp_setting', temp_setting)
+        print('cool', cool)
+        print('heat', heat)
+        print('fan_mode', fan_mode)
+
+        # Values for array: temp_setting, heat, cool, fan_mode
+
         settings_to_send = bytearray([temp_setting, heat, cool, fan_mode])
 
         crc = bytearray([crc_calc(settings_to_send)])
