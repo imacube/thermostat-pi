@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from digi.xbee.devices import XBeeDevice
 
 device = XBeeDevice('/dev/ttyUSB0', 9600)

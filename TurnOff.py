@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from time import sleep
 
 from digi.xbee.devices import XBeeDevice

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Copyright 2017, Digi International Inc.
 #
 # Permission to use, copy, modify, and/or distribute this software for any
