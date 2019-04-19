@@ -1,5 +1,29 @@
 #!/usr/bin/env python3
 
+"""
+Send state:
+  struct settingsStruct {
+    uint8_t temp_setting; // Temperature setting
+    uint8_t heat; // On or Off?
+    uint8_t cool; // On or Off?
+    uint8_t fan_mode; // Auto or On?
+  } settings_struct;
+
+Receive state:
+  struct thermostatStruct {
+    uint8_t _temp; // Current temperature
+    uint8_t _temp_setting; // Temperature setting
+    uint8_t _heat; // On or Off?
+    uint8_t _heat_relay; // On or Off?
+    uint8_t _cool; // On or Off?
+    uint8_t _cool_relay; // On or Off?
+    uint8_t _fan_mode; // Auto or On?
+    uint8_t _fan_relay; // On or Off?
+    unsigned long _run_stop; // When the system turned off, using system millis()
+    unsigned long _run_start; // When the system turned on, using system millis()
+} thermostat_struct;
+"""
+
 from time import sleep
 
 from digi.xbee.devices import XBeeDevice
