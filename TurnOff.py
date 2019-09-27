@@ -65,7 +65,7 @@ def crc_calc(data):
     #
     # Source: https://www.maximintegrated.com/en/app-notes/index.mvp/id/27
 
-    crc = 0x0;
+    crc = 0x0
 
     for d in data:
         crc = crc_table[crc ^ d]

@@ -40,7 +40,7 @@ def crc_calc(data):
     #
     # Source: https://www.maximintegrated.com/en/app-notes/index.mvp/id/27
 
-    crc = 0x0;
+    crc = 0x0
 
     for d in data:
         crc = crc_table[crc ^ d]
@@ -89,18 +89,21 @@ def main():
         xbee_message = get_remote_state(device, remote_device, DATA_TO_SEND)
         data = xbee_message.data[2:]
 
-        # struct thermostatStruct {
-        #     uint8_t _temp; // Current temperature
-        #     uint8_t _temp_setting; // Temperature setting
-        #     uint8_t _heat; // On or Off?
-        #     uint8_t _heat_relay; // On or Off?
-        #     uint8_t _cool; // On or Off?
-        #     uint8_t _cool_relay; // On or Off?
-        #     uint8_t _fan_mode; // Auto or On?
-        #     uint8_t _fan_relay; // On or Off?
-        #     unsigned long _run_stop; // When the system turned off, in milliseconds
-        #     unsigned long _run_start; // When the system turned on, in milliseconds
-        #   } thermostat_struct;
+        """
+        Struct used by the thermostat Arduino code:
+        struct thermostatStruct {
+            uint8_t _temp; // Current temperature
+            uint8_t _temp_setting; // Temperature setting
+            uint8_t _heat; // On or Off?
+            uint8_t _heat_relay; // On or Off?
+            uint8_t _cool; // On or Off?
+            uint8_t _cool_relay; // On or Off?
+            uint8_t _fan_mode; // Auto or On?
+            uint8_t _fan_relay; // On or Off?
+            unsigned long _run_stop; // When the system turned off, in milliseconds
+            unsigned long _run_start; // When the system turned on, in milliseconds
+          } thermostat_struct;
+        """
 
         # print('data len', len(data))
         # print('start', data[8:12].hex())

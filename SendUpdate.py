@@ -37,7 +37,7 @@ def crc_calc(data):
     #
     # Source: https://www.maximintegrated.com/en/app-notes/index.mvp/id/27
 
-    crc = 0x0;
+    crc = 0x0
 
     for d in data:
         crc = crc_table[crc ^ d]
@@ -71,7 +71,7 @@ def main():
 
         # Build message
         temp_setting = 74
-        heat = cool = fan_mode = 0
+        heat = fan_mode = 0
         cool = 1
         settings_to_send = bytearray([temp_setting, heat, cool, fan_mode])
 
