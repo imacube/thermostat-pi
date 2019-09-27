@@ -7,7 +7,7 @@ sudo apt install tmux vim rabbitmq-server
 # Python
 
 ```shell
-pip3 install -r requirements.txt --upgrade
+pip install -r requirements.txt --upgrade
 ```
 
 # RabbitMQ
