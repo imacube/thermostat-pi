@@ -61,9 +61,20 @@ crc_table = [
 
 
 def crc_calc(data):
-    # Calculate a CRC-8 of the object passed
-    #
-    # Source: https://www.maximintegrated.com/en/app-notes/index.mvp/id/27
+    """Calculate a CRC-8 of the object passed
+
+    Source: https://www.maximintegrated.com/en/app-notes/index.mvp/id/27
+
+    Parameters
+    ----------
+    data : bytearray
+        Binary data to calculate the CRC-8 for.
+
+    Returns
+    -------
+    int
+        CRC integer.
+    """
 
     crc = 0x0
 

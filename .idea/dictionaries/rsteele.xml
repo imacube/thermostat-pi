@@ -2,6 +2,7 @@
   <dictionary name="rsteele">
     <words>
       <w>arduino</w>
+      <w>bytearray</w>
       <w>cson</w>
       <w>digi</w>
       <w>tortious</w>
