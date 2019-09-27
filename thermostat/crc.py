@@ -1,6 +1,6 @@
 """Calculate CRC checksums for messages to and from the thermostat."""
 
-CRC_TABLE = [
+CRC_TABLE = [  # A copy of this resides in the thermostat Arduino code, they must be the same.
     247, 250, 54, 124, 174, 56, 24, 25, 76, 240, 58, 22, 88,
     134, 30, 79, 114, 93, 154, 41, 238, 78, 102, 185, 153, 4,
     203, 252, 113, 10, 237, 92, 3, 70, 196, 32, 55, 140, 229,

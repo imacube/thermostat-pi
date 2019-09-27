@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/thermostat/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thermostat/crc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thermostat/test_crc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Thermostat.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thermostat/crc.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermostat/crc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thermostat/test_crc.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermostat/test_crc.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,14 +39,14 @@
     </option>
   </component>
   <component name="NamedScopeManager">
-    <scope name="Exclude" pattern="!file[thermostat]:.pytest_cache//*" />
+    <scope name="Exclude" pattern="!file[thermostat]:.pytest_cache//*&amp;&amp;!file[thermostat]:thermostat/.pytest_cache//*" />
   </component>
   <component name="ProjectId" id="1ROikzazV92ZHRIqjWxL2WZNCrc" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="run.code.analysis.last.selected.profile" value="pThermostat" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
@@ -60,22 +61,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_crc.TestCrc.test_crc_success">
-    <configuration name="pytest for test_TurnOff.test_crc_calc" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="thermostat" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_TurnOff.test_crc_calc&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.pytest in test_crc.py">
     <configuration name="pytest for test_crc.MyTestCase" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="thermostat" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -106,6 +92,21 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_crc.TestCrc.test_crc_failure" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="thermostat" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermostat" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_crc.TestCrc.test_crc_failure&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest for test_crc.TestCrc.test_crc_success" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="thermostat" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,28 +122,28 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_TurnOff.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest in test_crc.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="thermostat" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermostat" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_TurnOff.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/thermostat/test_crc.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_crc.TestCrc.test_crc_success" />
+        <item itemvalue="Python tests.pytest in test_crc.py" />
+        <item itemvalue="Python tests.pytest for test_crc.TestCrc.test_crc_failure" />
         <item itemvalue="Python tests.pytest for test_crc.TestCrc" />
+        <item itemvalue="Python tests.pytest for test_crc.TestCrc.test_crc_success" />
         <item itemvalue="Python tests.pytest for test_crc.MyTestCase" />
-        <item itemvalue="Python tests.pytest for test_TurnOff.test_crc_calc" />
-        <item itemvalue="Python tests.pytest in test_TurnOff.py" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569555344265</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Initial thermostat module with CRC calculation method">
+      <created>1569555810591</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569555810591</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +237,7 @@
     <MESSAGE value="PyCharm inspection refactoring" />
     <MESSAGE value="PyCharm files" />
     <MESSAGE value="Initial example test&#10;&#10;Minor refactoring and PyCharm Inspect" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial example test&#10;&#10;Minor refactoring and PyCharm Inspect" />
+    <MESSAGE value="Initial thermostat module with CRC calculation method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial thermostat module with CRC calculation method" />
   </component>
 </project>

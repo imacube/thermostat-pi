@@ -1,0 +1,36 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Thermostat" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="mixinlogs.mixpanel.Mixpanel._Mixpanel__profile" />
+          <option value="mixinlogs.client_data.ClientData._ClientData__lookup" />
+          <option value="mixinlogs.client_data.ClientData._ClientData__expiration" />
+          <option value="mixinlogs.consume.Consume._Consume__processed" />
+          <option value="mixinlogs.rabbitmq.RabbitMQ._RabbitMQ__host" />
+          <option value="mixinlogs.rabbitmq.RabbitMQ._RabbitMQ__prefetch_count" />
+          <option value="mixinlogs.rabbitmq.RabbitMQ._RabbitMQ__connection_attempts" />
+          <option value="mixinlogs.rabbitmq.RabbitMQ._RabbitMQ__stack_timeout" />
+          <option value="mixinlogs.rabbitmq.RabbitMQ._RabbitMQ__socket_timeout" />
+          <option value="mixinlogs.rabbitmq.RabbitMQ._RabbitMQ__blocked_connection_timeout" />
+          <option value="mixinlogs.rabbitmq.RabbitMQ._RabbitMQ__port" />
+          <option value="mixinlogs.webservices.WebServices._WebServices__url" />
+          <option value="special_methods" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="SpellCheckingInspection" enabled="true" level="TYPO" enabled_by_default="false">
+      <scope name="Exclude" level="TYPO" enabled="true">
+        <option name="processCode" value="true" />
+        <option name="processLiterals" value="true" />
+        <option name="processComments" value="true" />
+      </scope>
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="true" />
+      <option name="processComments" value="true" />
+    </inspection_tool>
+  </profile>
+</component>

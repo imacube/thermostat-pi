@@ -1,7 +1,9 @@
+import pytest
+
 from thermostat.crc import crc_calc
 
 
-class TestCrc():
+class TestCrc:
     def test_crc_success(self):
         """Test TurnOff.crc_calc"""
 
@@ -16,3 +18,10 @@ class TestCrc():
         crc = bytearray([crc])
 
         assert bytearray(b'\xa9') == crc
+
+    def test_crc_failure(self):
+        """Test for a crc_calc method failure."""
+
+        with pytest.raises(TypeError):
+            # noinspection PyTypeChecker
+            crc_calc(3.3)
