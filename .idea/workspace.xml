@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Thermostat.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermostat/crc.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermostat/crc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermostat/test_crc.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermostat/test_crc.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -214,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569555810591</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="CRC calculation test">
+      <created>1569606486517</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569606486517</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,6 +241,7 @@
     <MESSAGE value="PyCharm files" />
     <MESSAGE value="Initial example test&#10;&#10;Minor refactoring and PyCharm Inspect" />
     <MESSAGE value="Initial thermostat module with CRC calculation method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial thermostat module with CRC calculation method" />
+    <MESSAGE value="CRC calculation test" />
+    <option name="LAST_COMMIT_MESSAGE" value="CRC calculation test" />
   </component>
 </project>
