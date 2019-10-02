@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="AutoTestManager">
+    <enabled-run-configurations>
+      <run-configuration type="tests" name="pytest for test_thermostat.TestThermostat.test_get_remote_state" />
+    </enabled-run-configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/thermostat/test_thermostat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thermostat/thermostat.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,37 +67,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_crc.py">
-    <configuration name="pytest for test_crc.MyTestCase" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="thermostat" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermostat" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_crc.MyTestCase&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_crc.TestCrc" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="thermostat" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermostat" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_crc.TestCrc&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.pytest for test_thermostat.TestThermostat.test_get_remote_state">
     <configuration name="pytest for test_crc.TestCrc.test_crc_failure" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="thermostat" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,7 +83,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_crc.TestCrc.test_crc_success" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_thermostat.TestThermostat" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="thermostat" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -114,7 +94,22 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_crc.TestCrc.test_crc_success&quot;" />
+      <option name="_new_target" value="&quot;test_thermostat.TestThermostat&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_thermostat.TestThermostat.test_get_remote_state" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="thermostat" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermostat" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_thermostat.TestThermostat.test_get_remote_state&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -133,13 +128,28 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_thermostat.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="thermostat" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermostat" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/thermostat/test_thermostat.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_thermostat.TestThermostat.test_get_remote_state" />
+        <item itemvalue="Python tests.pytest in test_thermostat.py" />
+        <item itemvalue="Python tests.pytest for test_thermostat.TestThermostat" />
         <item itemvalue="Python tests.pytest in test_crc.py" />
         <item itemvalue="Python tests.pytest for test_crc.TestCrc.test_crc_failure" />
-        <item itemvalue="Python tests.pytest for test_crc.TestCrc" />
-        <item itemvalue="Python tests.pytest for test_crc.TestCrc.test_crc_success" />
-        <item itemvalue="Python tests.pytest for test_crc.MyTestCase" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569606486517</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Updates to workspace.xml">
+      <created>1569982452777</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569982452777</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,6 +259,7 @@
     <MESSAGE value="Initial example test&#10;&#10;Minor refactoring and PyCharm Inspect" />
     <MESSAGE value="Initial thermostat module with CRC calculation method" />
     <MESSAGE value="CRC calculation test" />
-    <option name="LAST_COMMIT_MESSAGE" value="CRC calculation test" />
+    <MESSAGE value="Updates to workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates to workspace.xml" />
   </component>
 </project>
