@@ -9,10 +9,12 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/thermostat/test_thermostat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thermostat/thermostat.py" afterDir="false" />
+    <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="Initial test and Thermostat.get_remote_state&#10;&#10;More work is needed on the tests for this method.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thermostat/test_thermostat.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermostat/test_thermostat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thermostat/thermostat.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermostat/thermostat.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,8 +148,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.pytest for test_thermostat.TestThermostat.test_get_remote_state" />
-        <item itemvalue="Python tests.pytest in test_thermostat.py" />
         <item itemvalue="Python tests.pytest for test_thermostat.TestThermostat" />
+        <item itemvalue="Python tests.pytest in test_thermostat.py" />
         <item itemvalue="Python tests.pytest in test_crc.py" />
         <item itemvalue="Python tests.pytest for test_crc.TestCrc.test_crc_failure" />
       </list>
@@ -234,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569982452777</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Initial test and Thermostat.get_remote_state&#10;&#10;More work is needed on the tests for this method.">
+      <created>1570034036556</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570034036556</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -260,6 +269,7 @@
     <MESSAGE value="Initial thermostat module with CRC calculation method" />
     <MESSAGE value="CRC calculation test" />
     <MESSAGE value="Updates to workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates to workspace.xml" />
+    <MESSAGE value="Initial test and Thermostat.get_remote_state&#10;&#10;More work is needed on the tests for this method." />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial test and Thermostat.get_remote_state&#10;&#10;More work is needed on the tests for this method." />
   </component>
 </project>

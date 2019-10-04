@@ -17,3 +17,11 @@ sudo rabbitmq-plugins enable rabbitmq_management
 sudo rabbitmqctl add_user admin admin
 sudo rabbitmqctl set_user_tags admin administrator
 ```
+
+# Testing
+
+Generate a convergence report.
+
+```shell script
+pytest --cov-report=html --cov=thermostat
+```

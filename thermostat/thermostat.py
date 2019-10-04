@@ -57,11 +57,11 @@ class Thermostat:
                 xbee_message = self.device.read_data(10)  # Seconds
 
                 # Verify CRC
-                if crc_calc(xbee_message.data[2:]) != xbee_message.data[1]:
+                if crc_calc(xbee_message.data[2:]) == xbee_message.data[1]:
+                    LOGGER.info('CRC match')
+                else:
                     LOGGER.error('CRC does not match! Try again...')
                     raise TimeoutException  # Lazy so using this for now
-                else:
-                    print('CRC match')
 
                 return xbee_message, None
             except TimeoutException:
