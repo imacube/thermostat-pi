@@ -5,7 +5,7 @@ from unittest.mock import patch, MagicMock
 import pytest
 from digi.xbee.exception import TimeoutException
 
-from thermostat.exceptions import RetryException
+from thermostat.exceptions import RetryException, CrcVerificationFailure
 from thermostat.thermostat import Thermostat
 
 
@@ -35,7 +35,7 @@ class TestGetRemoteState:
         mock_crc_calc.assert_called_with(xbee_message.data[2:])
 
     def test_retry_exception(self, _, mock_remote, mock_device):
-        """Test for a RetryException."""
+        """Test for a RetryException exception being raised."""
 
         mock_device.read_data.side_effect = TimeoutException
 
@@ -43,3 +43,16 @@ class TestGetRemoteState:
 
         with pytest.raises(RetryException):
             thermostat.get_remote_state(self.data_to_send, attempts=3, retry_sleep=0)
+
+    def test_crc_verification_failure(self, mock_crc_calc, mock_remote, mock_device):
+        """Test for a CrcVerificationFailure exception being raised."""
+
+        xbee_message = MagicMock()
+        xbee_message.data = self.data_to_send
+        mock_device.read_data.return_value = xbee_message
+        mock_crc_calc.return_value = self.data_to_send[1:2]
+
+        thermostat = Thermostat(mock_device, mock_remote)
+
+        with pytest.raises(CrcVerificationFailure):
+            thermostat.get_remote_state(self.data_to_send, attempts=1, retry_sleep=0)

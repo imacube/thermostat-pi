@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="3" />
-  </component>
   <component name="AutoTestManager">
     <enabled-run-configurations>
       <run-configuration type="tests" name="pytest for test_thermostat.TestThermostat.test_get_remote_state" />
@@ -10,9 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Thermostat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Thermostat.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermostat/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermostat/exceptions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/thermostat/test_thermostat.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermostat/test_thermostat.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -256,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570225394604</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Additional tests for Thermostat.get_remote_state">
+      <created>1570225868544</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1570225868544</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,6 +284,7 @@
     <MESSAGE value="CRC calculation test" />
     <MESSAGE value="Updates to workspace.xml" />
     <MESSAGE value="Initial test and Thermostat.get_remote_state&#10;&#10;More work is needed on the tests for this method." />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial test and Thermostat.get_remote_state&#10;&#10;More work is needed on the tests for this method." />
+    <MESSAGE value="Additional tests for Thermostat.get_remote_state" />
+    <option name="LAST_COMMIT_MESSAGE" value="Additional tests for Thermostat.get_remote_state" />
   </component>
 </project>
