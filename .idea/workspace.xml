@@ -7,7 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thermostat/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermostat/exceptions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/thermostat/test_thermostat.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermostat/test_thermostat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thermostat/thermostat.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermostat/thermostat.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -257,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570225868544</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Additional tests for Thermostat.get_remote_state">
+      <created>1570226069130</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1570226069130</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

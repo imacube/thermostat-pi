@@ -5,7 +5,7 @@ from unittest.mock import patch, MagicMock
 import pytest
 from digi.xbee.exception import TimeoutException
 
-from thermostat.exceptions import RetryException, CrcVerificationFailure
+from thermostat.exceptions import RetryException, CrcVerificationFailure, SendFailure
 from thermostat.thermostat import Thermostat
 
 
@@ -13,12 +13,12 @@ from thermostat.thermostat import Thermostat
 @patch('digi.xbee.devices.RemoteXBeeDevice')
 @patch('thermostat.thermostat.crc_calc')
 class TestGetRemoteState:
-    """Test methods in the Thermostat class."""
+    """Test the get_remote_state method."""
 
     data_to_send = bytearray([0x01, 0x02, 0x03, 0x04])
 
     def test_success(self, mock_crc_calc, mock_remote, mock_device):
-        """Test the get_remote_state method."""
+        """Test a successful call of the method."""
 
         xbee_message = MagicMock()
         xbee_message.data = self.data_to_send
@@ -56,3 +56,36 @@ class TestGetRemoteState:
 
         with pytest.raises(CrcVerificationFailure):
             thermostat.get_remote_state(self.data_to_send, attempts=1, retry_sleep=0)
+
+
+@patch('digi.xbee.devices.XBeeDevice')
+@patch('digi.xbee.devices.RemoteXBeeDevice')
+class TestSendState:
+    """Test a successful call of the method."""
+
+    data_to_send = bytearray([0x01, 0x02, 0x03, 0x04])
+
+    def test_success(self, mock_remote, mock_device):
+        """Test a successful call of the method."""
+
+        send_result = MagicMock()
+        send_result.data = True
+        mock_device.send_data.return_value = send_result
+
+        thermostat = Thermostat(mock_device, mock_remote)
+        result = thermostat.send_state(self.data_to_send, attempts=1, retry_sleep=0)
+
+        assert result == send_result
+
+        mock_device.send_data.assert_called_with(mock_remote, self.data_to_send)
+        mock_device.send_data.assert_called_with(mock_remote, self.data_to_send)
+
+    def test_send_failure(self, mock_remote, mock_device):
+        """Test for a SendFailure exception being raised."""
+
+        mock_device.send_data.side_effect = TimeoutException
+
+        thermostat = Thermostat(mock_device, mock_remote)
+
+        with pytest.raises(SendFailure):
+            thermostat.send_state(self.data_to_send, attempts=3, retry_sleep=0)
