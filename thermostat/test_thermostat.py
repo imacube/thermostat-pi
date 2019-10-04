@@ -24,7 +24,7 @@ class TestGetRemoteState:
         thermostat = Thermostat(mock_device, mock_remote)
         result = thermostat.get_remote_state(data_to_send, attempts=1, retry_sleep=0)
 
-        assert result == (xbee_message, None)
+        assert result == xbee_message
 
         mock_device.send_data.assert_called_with(mock_remote, data_to_send)
         mock_device.read_data.assert_called_with(10)
