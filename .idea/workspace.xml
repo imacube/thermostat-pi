@@ -65,49 +65,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_thermostat.TestThermostat.test_get_remote_state">
-    <configuration name="pytest for test_crc.TestCrc.test_crc_failure" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.pytest for thermopi.test_thermostat">
+    <configuration name="pytest for thermopi.test_crc.TestCrc.test_crc_failure" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="thermostat" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermostat" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermopi" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_crc.TestCrc.test_crc_failure&quot;" />
+      <option name="_new_target" value="&quot;thermopi.test_crc.TestCrc.test_crc_failure&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_thermostat.TestThermostat" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for thermopi.test_thermostat" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="thermostat" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermostat" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermopi" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_thermostat.TestThermostat&quot;" />
+      <option name="_new_target" value="&quot;thermopi.test_thermostat&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_thermostat.TestThermostat.test_get_remote_state" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for thermopi.test_thermostat" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="thermostat" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermostat" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermopi" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_thermostat.TestThermostat.test_get_remote_state&quot;" />
+      <option name="_new_target" value="&quot;thermopi.test_thermostat&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -116,13 +116,13 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermostat" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermopi" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/thermostat/test_crc.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/thermopi/test_crc.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -131,23 +131,23 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermostat" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermopi" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/thermostat/test_thermostat.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/thermopi/test_thermostat.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_thermostat.TestThermostat.test_get_remote_state" />
-        <item itemvalue="Python tests.pytest for test_thermostat.TestThermostat" />
+        <item itemvalue="Python tests.pytest for thermopi.test_thermostat" />
+        <item itemvalue="Python tests.pytest for thermopi.test_thermostat" />
         <item itemvalue="Python tests.pytest in test_thermostat.py" />
         <item itemvalue="Python tests.pytest in test_crc.py" />
-        <item itemvalue="Python tests.pytest for test_crc.TestCrc.test_crc_failure" />
+        <item itemvalue="Python tests.pytest for thermopi.test_crc.TestCrc.test_crc_failure" />
       </list>
     </recent_temporary>
   </component>

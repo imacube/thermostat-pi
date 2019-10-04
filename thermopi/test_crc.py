@@ -1,6 +1,6 @@
 import pytest
 
-from thermostat.crc import crc_calc
+from thermopi.crc import crc_calc
 
 
 class TestCrc:

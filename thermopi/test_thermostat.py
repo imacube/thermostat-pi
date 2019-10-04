@@ -5,13 +5,13 @@ from unittest.mock import patch, MagicMock
 import pytest
 from digi.xbee.exception import TimeoutException
 
-from thermostat.exceptions import RetryException, CrcVerificationFailure, SendFailure
-from thermostat.thermostat import Thermostat
+from thermopi.exceptions import RetryException, CrcVerificationFailure, SendFailure
+from thermopi.thermostat import Thermostat
 
 
 @patch('digi.xbee.devices.XBeeDevice')
 @patch('digi.xbee.devices.RemoteXBeeDevice')
-@patch('thermostat.thermostat.crc_calc')
+@patch('thermopi.thermostat.crc_calc')
 class TestGetRemoteState:
     """Test the get_remote_state method."""
 

@@ -5,8 +5,8 @@ from time import sleep
 
 from digi.xbee.exception import TimeoutException
 
-from thermostat.crc import crc_calc
-from thermostat.exceptions import CrcVerificationFailure, RetryException, SendFailure
+from thermopi.crc import crc_calc
+from thermopi.exceptions import CrcVerificationFailure, RetryException, SendFailure
 
 LOGGER = logging.getLogger(__name__)
 
