@@ -18,4 +18,4 @@ def load_config(config_file='/etc/thermopi.yaml'):
     """
 
     with open(config_file) as in_file:
-        return yaml.load(in_file)
+        return yaml.load(in_file, Loader=yaml.FullLoader)
