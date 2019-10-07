@@ -3,14 +3,23 @@
   <component name="AutoTestManager">
     <enabled-run-configurations>
       <run-configuration type="tests" name="pytest for test_thermostat.TestThermostat.test_get_remote_state" />
+      <run-configuration type="tests" name="pytest in test_turn_off.py" />
+      <run-configuration type="tests" name="pytest in test_config.py" />
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="">
+    <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="Renamed module to thermopi">
+      <change afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/turn-off.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thermopi/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thermopi/test_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thermopi/test_turn_off.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thermopi/turn_off.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/rsteele.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/rsteele.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermostat/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermostat/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermostat/test_thermostat.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermostat/test_thermostat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermostat/thermostat.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermostat/thermostat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thermopi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thermopi/thermostat.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/thermostat.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,20 +74,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for thermopi.test_thermostat">
-    <configuration name="pytest for thermopi.test_crc.TestCrc.test_crc_failure" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.pytest in test_config.py">
+    <configuration name="turn-off" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="thermostat" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermopi" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;thermopi.test_crc.TestCrc.test_crc_failure&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/turn-off.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="pytest for thermopi.test_thermostat" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -111,7 +126,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_crc.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest in test_config.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="thermostat" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -122,7 +137,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/thermopi/test_crc.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/thermopi/test_config.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -141,13 +156,28 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_turn_off.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="thermostat" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thermopi" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/thermopi/test_turn_off.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test_config.py" />
+        <item itemvalue="Python.turn-off" />
+        <item itemvalue="Python tests.pytest in test_turn_off.py" />
         <item itemvalue="Python tests.pytest for thermopi.test_thermostat" />
         <item itemvalue="Python tests.pytest for thermopi.test_thermostat" />
-        <item itemvalue="Python tests.pytest in test_thermostat.py" />
-        <item itemvalue="Python tests.pytest in test_crc.py" />
-        <item itemvalue="Python tests.pytest for thermopi.test_crc.TestCrc.test_crc_failure" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570226069130</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Renamed module to thermopi">
+      <created>1570227712491</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1570227712491</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -295,6 +332,7 @@
     <MESSAGE value="Updates to workspace.xml" />
     <MESSAGE value="Initial test and Thermostat.get_remote_state&#10;&#10;More work is needed on the tests for this method." />
     <MESSAGE value="Additional tests for Thermostat.get_remote_state" />
-    <option name="LAST_COMMIT_MESSAGE" value="Additional tests for Thermostat.get_remote_state" />
+    <MESSAGE value="Renamed module to thermopi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed module to thermopi" />
   </component>
 </project>

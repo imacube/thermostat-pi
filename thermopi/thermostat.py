@@ -80,7 +80,7 @@ class Thermostat:
         return xbee_message
 
     def send_state(self, data_to_send, attempts=10, retry_sleep=7):
-        """Send a new state config to the thermostat.
+        """Send a new state config.yaml to the thermostat.
 
         Parameters
         ----------
