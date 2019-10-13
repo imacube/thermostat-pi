@@ -35,14 +35,20 @@ class TestTurnOff:
 
         switch_on_off, mock_device, mock_remote_device = turn_off_objects
 
-        remote_state = bytearray([255, 255, 255, 75, 0, 0, 0])
+        remote_state_before_off = bytearray([255, 255, 255, 75, 0, 1, 1])
+        remote_state_after_off = bytearray([255, 255, 255, 75, 0, 0, 0])
 
-        mock_get_remote_state.return_value.data = remote_state
+        class XBeeMessage:
+            def __init__(self, data):
+                self.data = data
+
+        mock_get_remote_state.side_effect = [
+            XBeeMessage(remote_state_before_off),
+            XBeeMessage(remote_state_after_off)
+        ]
 
         switch_on_off.off()
 
         mock_device.open.assert_called_with()
-        mock_get_remote_state.assert_called_once_with()
-        mock_send_state.assert_called_once_with(remote_state[3:])
-
-        # Get current thermostat state and compare to expected results
+        mock_get_remote_state.assert_called_with()
+        mock_send_state.assert_called_once_with(remote_state_after_off[3:])

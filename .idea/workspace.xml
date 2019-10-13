@@ -10,21 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_get_remote_state.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_switch_on_off.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thermopi/switch_on_off.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_crc.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_crc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_thermostat.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_send_state.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_turn_off.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermopi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermopi/crc.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/crc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermopi/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermopi/thermostat.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/thermostat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermopi/turn_off.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurnOff.py" beforeDir="false" afterPath="$PROJECT_DIR$/TurnOff.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_switch_on_off.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_switch_on_off.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thermopi/switch_on_off.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/switch_on_off.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -332,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570468196956</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Many changes, still a work in progress">
+      <created>1570939101433</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1570939101433</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -364,6 +360,7 @@
     <MESSAGE value="Current state from when last worked on" />
     <MESSAGE value="Moved tests into tests directory" />
     <MESSAGE value="Updated load_config to use current yaml.load options" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated load_config to use current yaml.load options" />
+    <MESSAGE value="Many changes, still a work in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Many changes, still a work in progress" />
   </component>
 </project>
