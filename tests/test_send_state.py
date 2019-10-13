@@ -21,6 +21,7 @@ class TestSendState:
 
         send_result = MagicMock()
         send_result.data = True
+        mock_device.is_open.return_value = False
         mock_device.send_data.return_value = send_result
 
         thermostat = Thermostat(mock_device, mock_remote)
@@ -28,8 +29,6 @@ class TestSendState:
 
         assert result == send_result
 
-        mock_device.open.assert_called_with()
-        mock_device.close.assert_called_with()
         mock_device.send_data.assert_called_with(mock_remote, bytearray(b'\x03\xc2\x01\x02\x03\x04'))
 
     def test_send_failure(self, mock_remote, mock_device):

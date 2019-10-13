@@ -51,7 +51,7 @@ class SwitchOnOff(Thermostat):
                 heat = cool = fan_mode = 0
                 settings_to_send = bytearray([temp_setting, heat, cool, fan_mode])
 
-                LOGGER.info('settings_to_send {}'.format( settings_to_send))
+                LOGGER.info('settings_to_send {}'.format(settings_to_send))
                 result = self.send_state(settings_to_send)
                 LOGGER.info(result)
 

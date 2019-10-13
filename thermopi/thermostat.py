@@ -56,33 +56,27 @@ class Thermostat:
 
         xbee_message = None
 
-        try:
-            if not self.device.is_open():
-                self.device.open()
+        for _ in range(attempts):
+            LOGGER.info('Sending request for current state')
+            self.device.send_data(self.remote_device, self.data_type_get_remote_state)
+            LOGGER.info('Successfully sent')
 
-            for _ in range(attempts):
-                LOGGER.info('Sending request for current state')
-                self.device.send_data(self.remote_device, self.data_type_get_remote_state)
-                LOGGER.info('Successfully sent')
+            try:
+                xbee_message = self.device.read_data(10)  # Seconds
+            except TimeoutException:
+                LOGGER.warning('Timed out')
+                sleep(retry_sleep)
+                continue
 
-                try:
-                    xbee_message = self.device.read_data(10)  # Seconds
-                except TimeoutException:
-                    LOGGER.warning('Timed out')
-                    sleep(retry_sleep)
-                    continue
+            if crc_calc(xbee_message.data[2:]) != xbee_message.data[1]:
+                LOGGER.error('CRC does not match! Try again...')
+                raise CrcVerificationFailure
 
-                if crc_calc(xbee_message.data[2:]) != xbee_message.data[1]:
-                    LOGGER.error('CRC does not match! Try again...')
-                    raise CrcVerificationFailure
+            LOGGER.info('CRC match')
+            break
 
-                LOGGER.info('CRC match')
-                break
-
-            if xbee_message is None:
-                raise FailedToGetState
-        finally:
-            self.device.close()
+        if xbee_message is None:
+            raise FailedToGetState
 
         return xbee_message
 
@@ -104,27 +98,22 @@ class Thermostat:
             If there is a failure to send the data.
         """
 
-        try:
-            self.device.open()
+        result = None
 
-            result = None
+        crc = crc_calc(data_to_send)
 
-            crc = crc_calc(data_to_send)
+        settings_to_send = self.data_type_send_state + crc + data_to_send
 
-            settings_to_send = self.data_type_send_state + crc + data_to_send
+        for _ in range(attempts):
+            LOGGER.info('Sending data to {} -> {}...'.format(self.remote_device.get_64bit_addr(), settings_to_send))
+            try:
+                result = self.device.send_data(self.remote_device, settings_to_send)
+                break
+            except Exception as exception:
+                LOGGER.error(exception)
+                sleep(retry_sleep)
 
-            for _ in range(attempts):
-                LOGGER.info('Sending data to {} -> {}...'.format(self.remote_device.get_64bit_addr(), settings_to_send))
-                try:
-                    result = self.device.send_data(self.remote_device, settings_to_send)
-                    break
-                except Exception as exception:
-                    LOGGER.error(exception)
-                    sleep(retry_sleep)
-
-            if result is None:
-                raise SendFailure
-        finally:
-            self.device.close()
+        if result is None:
+            raise SendFailure
 
         return result
