@@ -1,3 +1,5 @@
+"""Turn off the thermostat."""
+
 import logging
 
 from thermopi import Thermostat
@@ -6,7 +8,9 @@ from thermopi.exceptions import FailedToUpdateState
 LOGGER = logging.getLogger(__name__)
 
 
-class SwitchOnOff(Thermostat):
+class SwitchOff(Thermostat):
+    """Turn off the thermostat."""
+
     def __init__(self, device, remote_device):
         """
 
@@ -46,7 +50,7 @@ class SwitchOnOff(Thermostat):
                 data = xbee_message.data[3:]
 
                 temp_setting = data[0]
-                heat = cool = fan_mode = 0
+                heat = cool = fan_mode = False
                 settings_to_send = self.gen_thermostat_msg(temp_setting, heat, cool, fan_mode)
 
                 LOGGER.info('settings_to_send {}'.format(settings_to_send))

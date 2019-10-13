@@ -10,10 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/test_gen_thermostat_msg.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermopi/switch_on_off.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/switch_on_off.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermopi/thermostat.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/thermostat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_switch_on_off.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_switch_on_off.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thermopi/switch_on_off.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/switch_off.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -363,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571002822564</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Added method to generate thermostat message">
+      <created>1571003600269</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1571003600269</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -401,6 +407,7 @@
     <MESSAGE value="Fixed tests so they work with new code changes" />
     <MESSAGE value="Dropped open/close from core thermostat methods" />
     <MESSAGE value="Changes after inspect run" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes after inspect run" />
+    <MESSAGE value="Added method to generate thermostat message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added method to generate thermostat message" />
   </component>
 </project>

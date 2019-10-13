@@ -5,7 +5,7 @@ from unittest.mock import MagicMock, patch
 import pytest
 
 from thermopi.exceptions import FailedToGetState
-from thermopi.switch_on_off import SwitchOnOff
+from thermopi.switch_off import SwitchOff
 
 
 @pytest.fixture
@@ -23,7 +23,7 @@ def turn_off_objects():
     mock_device_open = MagicMock()
     mock_device_open.is_open.return_value = True
 
-    return SwitchOnOff(device=mock_device, remote_device=mock_remote_device), mock_device, mock_remote_device
+    return SwitchOff(device=mock_device, remote_device=mock_remote_device), mock_device, mock_remote_device
 
 
 @patch('thermopi.thermostat.Thermostat.get_remote_state')
