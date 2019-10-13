@@ -11,3 +11,15 @@ class CrcVerificationFailure(Exception):
 
 class RetryException(Exception):
     """Multiple tries have failed."""
+
+
+class FailedToGetState(Exception):
+    """Failed to get the thermostat state."""
+
+
+class FailedToUpdateState(Exception):
+    """Failed to update the thermostat state."""
+
+
+class BadChoiceException(Exception):
+    """If a bad choice is made."""

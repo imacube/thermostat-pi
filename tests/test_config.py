@@ -12,7 +12,10 @@ class TestLoadConfig:
 
         expected_result = {'remote_xbee': 'thermostat'}
 
-        result = load_config('../config.yaml')
+        try:
+            result = load_config('tests/config.yaml')
+        except FileNotFoundError:
+            result = load_config('config.yaml')
 
         assert result == expected_result
 

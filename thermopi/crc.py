@@ -45,4 +45,4 @@ def crc_calc(data):
     for d in data:
         crc = CRC_TABLE[crc ^ d]
 
-    return crc
+    return bytearray([crc])

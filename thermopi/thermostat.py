@@ -28,13 +28,14 @@ class Thermostat:
         self.device = device
         self.remote_device = remote_device
 
-    def get_remote_state(self, data_to_send, attempts=10, retry_sleep=7):
+        self.data_type_get_remote_state = bytearray([0x01])  # Get remote state data type
+        self.data_type_send_state = bytearray([0x03])  # Send state date type
+
+    def get_remote_state(self, attempts=10, retry_sleep=7):
         """Get the remote stat from the thermostat.
 
         Parameters
         ----------
-        data_to_send : bytearray
-            Payload to send to thermostat.
         attempts : int
             Number of times to try to get the response from the thermostat.
         retry_sleep : int
@@ -55,31 +56,37 @@ class Thermostat:
 
         xbee_message = None
 
-        for _ in range(attempts):
-            LOGGER.info('Sending request for current state')
-            self.device.send_data(self.remote_device, data_to_send)
-            LOGGER.info('Successfully sent')
+        try:
+            if not self.device.is_open():
+                self.device.open()
 
-            try:
-                xbee_message = self.device.read_data(10)  # Seconds
-            except TimeoutException:
-                LOGGER.warning('Timed out')
-                sleep(retry_sleep)
-                continue
+            for _ in range(attempts):
+                LOGGER.info('Sending request for current state')
+                self.device.send_data(self.remote_device, self.data_type_get_remote_state)
+                LOGGER.info('Successfully sent')
 
-            if crc_calc(xbee_message.data[2:]) != xbee_message.data[1]:
-                LOGGER.error('CRC does not match! Try again...')
-                raise CrcVerificationFailure
+                try:
+                    xbee_message = self.device.read_data(10)  # Seconds
+                except TimeoutException:
+                    LOGGER.warning('Timed out')
+                    sleep(retry_sleep)
+                    continue
 
-            LOGGER.info('CRC match')
-            break
+                if crc_calc(xbee_message.data[2:]) != xbee_message.data[1]:
+                    LOGGER.error('CRC does not match! Try again...')
+                    raise CrcVerificationFailure
 
-        if xbee_message is None:
-            raise RetryException
+                LOGGER.info('CRC match')
+                break
+
+            if xbee_message is None:
+                raise RetryException
+        finally:
+            self.device.close()
 
         return xbee_message
 
-    def send_state(self, data_to_send, attempts=10, retry_sleep=7):
+    def send_state(self, data_to_send: bytearray, attempts: int = 10, retry_sleep: int = 7) -> object:
         """Send a new state config.yaml to the thermostat.
 
         Parameters
@@ -97,18 +104,27 @@ class Thermostat:
             If there is a failure to send the data.
         """
 
-        result = None
+        try:
+            self.device.open()
 
-        for _ in range(attempts):
-            LOGGER.info("Sending data to %s -> %s..." % (self.remote_device.get_64bit_addr(), data_to_send))
-            try:
-                result = self.device.send_data(self.remote_device, data_to_send)
-                break
-            except Exception as exception:
-                LOGGER.error(exception)
-                sleep(retry_sleep)
+            result = None
 
-        if result is None:
-            raise SendFailure
+            crc = crc_calc(data_to_send)
+
+            settings_to_send = self.data_type_send_state + crc + data_to_send
+
+            for _ in range(attempts):
+                LOGGER.info('Sending data to {} -> {}...'.format(self.remote_device.get_64bit_addr(), settings_to_send))
+                try:
+                    result = self.device.send_data(self.remote_device, settings_to_send)
+                    break
+                except Exception as exception:
+                    LOGGER.error(exception)
+                    sleep(retry_sleep)
+
+            if result is None:
+                raise SendFailure
+        finally:
+            self.device.close()
 
         return result

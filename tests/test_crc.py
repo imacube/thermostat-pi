@@ -15,7 +15,6 @@ class TestCrc:
 
         settings_to_send = bytearray([temp_setting, heat, cool, fan_mode, other_data])
         crc = crc_calc(settings_to_send)
-        crc = bytearray([crc])
 
         assert bytearray(b'\xa9') == crc
 
