@@ -5,7 +5,7 @@ from unittest.mock import patch, MagicMock
 import pytest
 from digi.xbee.exception import TimeoutException
 
-from thermopi.exceptions import RetryException, CrcVerificationFailure
+from thermopi.exceptions import RetryException, CrcVerificationFailure, FailedToGetState
 from thermopi.thermostat import Thermostat
 
 
@@ -23,6 +23,7 @@ class TestGetRemoteState:
         xbee_message = MagicMock()
         xbee_message.data = self.data_to_send
         mock_device.read_data.return_value = xbee_message
+        mock_device.is_open.return_value = False
         mock_crc_calc.return_value = self.data_to_send[1]
 
         thermostat = Thermostat(mock_device, mock_remote)
@@ -43,7 +44,7 @@ class TestGetRemoteState:
 
         thermostat = Thermostat(mock_device, mock_remote)
 
-        with pytest.raises(RetryException):
+        with pytest.raises(FailedToGetState):
             thermostat.get_remote_state(attempts=1, retry_sleep=0)
 
     def test_crc_verification_failure(self, mock_crc_calc, mock_remote, mock_device):
