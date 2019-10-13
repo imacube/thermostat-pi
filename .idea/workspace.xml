@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tests/test_switch_on_off.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_switch_off.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thermopi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -374,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571006900541</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Further renaming by SwitchOnOff to SwitchOff">
+      <created>1571007033014</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1571007033014</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -414,6 +421,7 @@
     <MESSAGE value="Changes after inspect run" />
     <MESSAGE value="Added method to generate thermostat message" />
     <MESSAGE value="SwitchOnOff now only SwitchOff" />
-    <option name="LAST_COMMIT_MESSAGE" value="SwitchOnOff now only SwitchOff" />
+    <MESSAGE value="Further renaming by SwitchOnOff to SwitchOff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Further renaming by SwitchOnOff to SwitchOff" />
   </component>
 </project>
