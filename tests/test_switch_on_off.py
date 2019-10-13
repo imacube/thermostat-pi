@@ -4,6 +4,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
+from thermopi.exceptions import FailedToGetState
 from thermopi.switch_on_off import SwitchOnOff
 
 
@@ -52,3 +53,13 @@ class TestTurnOff:
         mock_device.open.assert_called_with()
         mock_get_remote_state.assert_called_with()
         mock_send_state.assert_called_once_with(remote_state_after_off[3:])
+
+    def test_get_remote_state_failure(self, mock_send_state, mock_get_remote_state, turn_off_objects):
+        """Test for a FailedToGetState exception."""
+
+        switch_on_off, mock_device, mock_remote_device = turn_off_objects
+
+        mock_get_remote_state.side_effect = FailedToGetState
+
+        with pytest.raises(FailedToGetState):
+            switch_on_off.off()

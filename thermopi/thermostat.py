@@ -6,7 +6,7 @@ from time import sleep
 from digi.xbee.exception import TimeoutException
 
 from thermopi.crc import crc_calc
-from thermopi.exceptions import CrcVerificationFailure, RetryException, SendFailure
+from thermopi.exceptions import CrcVerificationFailure, SendFailure, FailedToGetState
 
 LOGGER = logging.getLogger(__name__)
 
@@ -80,7 +80,7 @@ class Thermostat:
                 break
 
             if xbee_message is None:
-                raise RetryException
+                raise FailedToGetState
         finally:
             self.device.close()
 
