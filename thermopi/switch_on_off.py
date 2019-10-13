@@ -47,7 +47,7 @@ class SwitchOnOff(Thermostat):
 
                 temp_setting = data[0]
                 heat = cool = fan_mode = 0
-                settings_to_send = bytearray([temp_setting, heat, cool, fan_mode])
+                settings_to_send = self.gen_thermostat_msg(temp_setting, heat, cool, fan_mode)
 
                 LOGGER.info('settings_to_send {}'.format(settings_to_send))
                 result = self.send_state(settings_to_send)

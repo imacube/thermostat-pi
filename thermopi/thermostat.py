@@ -31,6 +31,29 @@ class Thermostat:
         self.data_type_get_remote_state = bytearray([0x01])  # Get remote state data type
         self.data_type_send_state = bytearray([0x03])  # Send state date type
 
+    @staticmethod
+    def gen_thermostat_msg(temp, heat, cool, fan):
+        """
+
+        Parameters
+        ----------
+        temp : int
+            Temperature setting.
+        heat : bool
+            Heat on or off.
+        cool : bool
+            Cool on or off.
+        fan : bool
+            Fan on or off.
+
+        Returns
+        -------
+        bytearray
+            Contains the thermostat data converted to a byte array.
+        """
+
+        return bytearray([temp, heat, cool, fan])
+
     def get_remote_state(self, attempts=10, retry_sleep=7):
         """Get the remote stat from the thermostat.
 
