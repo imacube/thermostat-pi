@@ -34,7 +34,7 @@ class TestTurnOff:
     def test_success_off(self, mock_send_state, mock_get_remote_state, turn_off_objects):
         """Turn off the thermostat"""
 
-        switch_on_off, mock_device, mock_remote_device = turn_off_objects
+        switch_off, mock_device, mock_remote_device = turn_off_objects
 
         remote_state_before_off = bytearray([255, 255, 255, 75, 0, 1, 1])
         remote_state_after_off = bytearray([255, 255, 255, 75, 0, 0, 0])
@@ -48,7 +48,7 @@ class TestTurnOff:
             XBeeMessage(remote_state_after_off)
         ]
 
-        switch_on_off.off()
+        switch_off.off()
 
         mock_device.open.assert_called_with()
         mock_get_remote_state.assert_called_with()
@@ -57,9 +57,9 @@ class TestTurnOff:
     def test_get_remote_state_failure(self, _, mock_get_remote_state, turn_off_objects):
         """Test for a FailedToGetState exception."""
 
-        switch_on_off, mock_device, mock_remote_device = turn_off_objects
+        switch_off, mock_device, mock_remote_device = turn_off_objects
 
         mock_get_remote_state.side_effect = FailedToGetState
 
         with pytest.raises(FailedToGetState):
-            switch_on_off.off()
+            switch_off.off()
