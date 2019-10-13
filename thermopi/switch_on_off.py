@@ -20,13 +20,11 @@ class SwitchOnOff(Thermostat):
 
         super().__init__(device, remote_device)
 
-    def off(self, temp=0, attempts=10):
+    def off(self, attempts=10):
         """Turn off the thermostat.
 
         Parameters
         ----------
-        temp : int
-            0 for no change to the temperature, else the value set on the thermostat.
         attempts : int
             Number of times to try to get the response from the thermostat.
 

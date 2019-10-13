@@ -54,7 +54,7 @@ class TestTurnOff:
         mock_get_remote_state.assert_called_with()
         mock_send_state.assert_called_once_with(remote_state_after_off[3:])
 
-    def test_get_remote_state_failure(self, mock_send_state, mock_get_remote_state, turn_off_objects):
+    def test_get_remote_state_failure(self, _, mock_get_remote_state, turn_off_objects):
         """Test for a FailedToGetState exception."""
 
         switch_on_off, mock_device, mock_remote_device = turn_off_objects

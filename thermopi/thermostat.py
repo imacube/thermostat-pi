@@ -102,7 +102,7 @@ class Thermostat:
 
         crc = crc_calc(data_to_send)
 
-        settings_to_send = self.data_type_send_state + crc + data_to_send
+        settings_to_send = self.data_type_send_state + bytes(crc) + data_to_send
 
         for _ in range(attempts):
             LOGGER.info('Sending data to {} -> {}...'.format(self.remote_device.get_64bit_addr(), settings_to_send))
