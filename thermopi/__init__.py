@@ -3,7 +3,9 @@
 import logging
 
 from thermopi.thermostat import Thermostat
+from thermopi.set_thermostat import SetThermostat
 from thermopi.switch_off import SwitchOff
+
 
 # noinspection SpellCheckingInspection
 LOG_FORMAT = '%(asctime)s %(levelname)s %(filename)s %(lineno)d - %(message)s'
