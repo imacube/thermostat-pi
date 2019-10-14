@@ -5,8 +5,8 @@ from time import sleep
 
 from digi.xbee.exception import TimeoutException
 
-from thermostat.crc import crc_calc
-from thermostat.exceptions import CrcVerificationFailure, RetryException, SendFailure
+from thermopi.crc import crc_calc
+from thermopi.exceptions import CrcVerificationFailure, SendFailure, FailedToGetState
 
 LOGGER = logging.getLogger(__name__)
 
@@ -28,13 +28,37 @@ class Thermostat:
         self.device = device
         self.remote_device = remote_device
 
-    def get_remote_state(self, data_to_send, attempts=10, retry_sleep=7):
+        self.data_type_get_remote_state = bytearray([0x01])  # Get remote state data type
+        self.data_type_send_state = bytearray([0x03])  # Send state date type
+
+    @staticmethod
+    def gen_thermostat_msg(temp, heat, cool, fan):
+        """
+
+        Parameters
+        ----------
+        temp : int
+            Temperature setting.
+        heat : bool
+            Heat on or off.
+        cool : bool
+            Cool on or off.
+        fan : bool
+            Fan on or off.
+
+        Returns
+        -------
+        bytearray
+            Contains the thermostat data converted to a byte array.
+        """
+
+        return bytearray([temp, heat, cool, fan])
+
+    def get_remote_state(self, attempts=10, retry_sleep=7):
         """Get the remote stat from the thermostat.
 
         Parameters
         ----------
-        data_to_send : bytearray
-            Payload to send to thermostat.
         attempts : int
             Number of times to try to get the response from the thermostat.
         retry_sleep : int
@@ -57,7 +81,7 @@ class Thermostat:
 
         for _ in range(attempts):
             LOGGER.info('Sending request for current state')
-            self.device.send_data(self.remote_device, data_to_send)
+            self.device.send_data(self.remote_device, self.data_type_get_remote_state)
             LOGGER.info('Successfully sent')
 
             try:
@@ -75,12 +99,12 @@ class Thermostat:
             break
 
         if xbee_message is None:
-            raise RetryException
+            raise FailedToGetState
 
         return xbee_message
 
-    def send_state(self, data_to_send, attempts=10, retry_sleep=7):
-        """Send a new state config to the thermostat.
+    def send_state(self, data_to_send: bytearray, attempts: int = 10, retry_sleep: int = 7) -> object:
+        """Send a new state config.yaml to the thermostat.
 
         Parameters
         ----------
@@ -99,10 +123,14 @@ class Thermostat:
 
         result = None
 
+        crc = crc_calc(data_to_send)
+
+        settings_to_send = self.data_type_send_state + bytes(crc) + data_to_send
+
         for _ in range(attempts):
-            LOGGER.info("Sending data to %s -> %s..." % (self.remote_device.get_64bit_addr(), data_to_send))
+            LOGGER.info('Sending data to {} -> {}...'.format(self.remote_device.get_64bit_addr(), settings_to_send))
             try:
-                result = self.device.send_data(self.remote_device, data_to_send)
+                result = self.device.send_data(self.remote_device, settings_to_send)
                 break
             except Exception as exception:
                 LOGGER.error(exception)

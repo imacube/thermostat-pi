@@ -23,5 +23,5 @@ sudo rabbitmqctl set_user_tags admin administrator
 Generate a convergence report.
 
 ```shell script
-pytest --cov-report=html --cov=thermostat
+pytest --cov-report=html --cov=thermopi
 ```

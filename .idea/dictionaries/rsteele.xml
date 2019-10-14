@@ -5,6 +5,8 @@
       <w>bytearray</w>
       <w>cson</w>
       <w>digi</w>
+      <w>pytest</w>
+      <w>thermopi</w>
       <w>tortious</w>
       <w>uint</w>
       <w>xbee</w>
