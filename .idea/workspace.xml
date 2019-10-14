@@ -10,10 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/test_set_thermostat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thermopi/set_thermostat.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermopi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thermopi/switch_off.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/switch_off.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -392,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571007115879</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Dedicated set state class">
+      <created>1571026962238</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1571026962238</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -409,7 +414,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changelog and PyCharm files" />
     <MESSAGE value="Reformated and updated changelog" />
     <MESSAGE value="Updates to get requirements.txt contents installed" />
     <MESSAGE value="PyCharm inspection refactoring" />
@@ -434,6 +438,7 @@
     <MESSAGE value="SwitchOnOff now only SwitchOff" />
     <MESSAGE value="Further renaming by SwitchOnOff to SwitchOff" />
     <MESSAGE value="Making SwitchOff available directly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Making SwitchOff available directly" />
+    <MESSAGE value="Dedicated set state class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dedicated set state class" />
   </component>
 </project>

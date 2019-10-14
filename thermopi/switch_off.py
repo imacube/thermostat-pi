@@ -2,13 +2,12 @@
 
 import logging
 
-from thermopi import Thermostat
-from thermopi.exceptions import FailedToUpdateState
+from thermopi import SetThermostat
 
 LOGGER = logging.getLogger(__name__)
 
 
-class SwitchOff(Thermostat):
+class SwitchOff(SetThermostat):
     """Turn off the thermostat."""
 
     def __init__(self, device, remote_device):
@@ -40,34 +39,4 @@ class SwitchOff(Thermostat):
             Failed to update the thermostat.
         """
 
-        success = False
-
-        try:
-            self.device.open()
-
-            for _ in range(attempts):
-                xbee_message = self.get_remote_state()
-                data = xbee_message.data[3:]
-
-                temp_setting = data[0]
-                heat = cool = fan_mode = False
-                settings_to_send = self.gen_thermostat_msg(temp_setting, heat, cool, fan_mode)
-
-                LOGGER.info('settings_to_send {}'.format(settings_to_send))
-                result = self.send_state(settings_to_send)
-                LOGGER.info(result)
-
-                xbee_message = self.get_remote_state()
-                data = xbee_message.data[3:]
-                if settings_to_send == data:
-                    success = True
-                    break
-
-                LOGGER.critical('Failed to turn off Thermostat!')
-
-            if not success:
-                raise FailedToUpdateState
-
-        finally:
-            if self.device is not None and self.device.is_open():
-                self.device.close()
+        self.set_state(0, False, False, False, attempts=attempts)
