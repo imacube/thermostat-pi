@@ -140,3 +140,32 @@ class Thermostat:
             raise SendFailure
 
         return result
+
+    def send_temperature(self, temp_identifier: int, temperature: int, senser_id: int, attempts: int,
+                         retry_sleep: int):
+        """Send a temperature to the thermostat.
+
+        Parameters
+        ----------
+        temp_identifier : int
+            Data packet identifier. Temperature data can have different values so this is not hard set.
+        temp_data : bytearray
+            Temperature data read from the temperature probe.
+
+        Returns
+        -------
+        XBeePacket
+            The response.
+        """
+
+        temp_data = bytearray([temperature, senser_id])
+
+        temperature_to_send = bytearray([temp_identifier]) + crc_calc(temp_data) + temp_data
+
+        LOGGER.info('Sending data to {} -> {}...'.format(self.remote_device.get_64bit_addr(), temperature_to_send))
+        result = self.device.send_data(self.remote_device, temperature_to_send)
+
+        if result is None:
+            raise SendFailure
+
+        return result
