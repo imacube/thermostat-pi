@@ -29,8 +29,9 @@ class TestSendTemperature:
 
         thermostat = Thermostat(mock_device, mock_remote)
         thermostat.send_temperature(temp_identifier=0x10, temperature=self.temperature,
-                                    senser_id=self.sensor_id, attempts=1, retry_sleep=0)
+                                    sensor_id=self.sensor_id, attempts=1, retry_sleep=0)
 
+        mock_device.send_data.assert_called_with(mock_remote, bytearray([0x10]) + temp_data + temp_data)
         mock_crc_calc.assert_called_with(temp_data)
 
     def test_retry_exception(self, _, mock_remote, mock_device):

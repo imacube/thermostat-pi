@@ -115,6 +115,11 @@ class Thermostat:
         retry_sleep : int
             How many seconds to wait between tries.
 
+        Returns
+        -------
+        XBeePacket
+            The response.
+
         Raises
         ------
         SendFailure
@@ -127,21 +132,11 @@ class Thermostat:
 
         settings_to_send = self.data_type_send_state + bytes(crc) + data_to_send
 
-        for _ in range(attempts):
-            LOGGER.info('Sending data to {} -> {}...'.format(self.remote_device.get_64bit_addr(), settings_to_send))
-            try:
-                result = self.device.send_data(self.remote_device, settings_to_send)
-                break
-            except Exception as exception:
-                LOGGER.error(exception)
-                sleep(retry_sleep)
-
-        if result is None:
-            raise SendFailure
+        result = self.send(settings_to_send, attempts, retry_sleep)
 
         return result
 
-    def send_temperature(self, temp_identifier: int, temperature: int, senser_id: int, attempts: int,
+    def send_temperature(self, temp_identifier: int, temperature: int, sensor_id: int, attempts: int,
                          retry_sleep: int):
         """Send a temperature to the thermostat.
 
@@ -149,21 +144,67 @@ class Thermostat:
         ----------
         temp_identifier : int
             Data packet identifier. Temperature data can have different values so this is not hard set.
-        temp_data : bytearray
+        temperature : int
             Temperature data read from the temperature probe.
+        sensor_id : int
+            Sensor ID.
+        attempts : int
+            Number of times to try to send the data.
+        retry_sleep : int
+            How many seconds to wait between tries.
 
         Returns
         -------
         XBeePacket
             The response.
+
+        Raises
+        ------
+        SendFailure
+            If there is a failure to send the data.
         """
 
-        temp_data = bytearray([temperature, senser_id])
+        temp_data = bytearray([temperature, sensor_id])
 
         temperature_to_send = bytearray([temp_identifier]) + crc_calc(temp_data) + temp_data
 
-        LOGGER.info('Sending data to {} -> {}...'.format(self.remote_device.get_64bit_addr(), temperature_to_send))
-        result = self.device.send_data(self.remote_device, temperature_to_send)
+        result = self.send(temperature_to_send, attempts, retry_sleep)
+
+        return result
+
+    def send(self, data, attempts, retry_sleep):
+        """
+
+        Parameters
+        ----------
+        data : bytearray
+            Data to send.
+        attempts : int
+            Number of times to try to send the data.
+        retry_sleep : int
+            How many seconds to wait between tries.
+
+        Returns
+        -------
+        XBeePacket
+            The response.
+
+        Raises
+        ------
+        SendFailure
+            If there is a failure to send the data.
+        """
+
+        result = None
+
+        for _ in range(attempts):
+            LOGGER.info('Sending data to {} -> {}...'.format(self.remote_device.get_64bit_addr(), data))
+            try:
+                result = self.device.send_data(self.remote_device, data)
+                break
+            except Exception as exception:
+                LOGGER.error(exception)
+                sleep(retry_sleep)
 
         if result is None:
             raise SendFailure
