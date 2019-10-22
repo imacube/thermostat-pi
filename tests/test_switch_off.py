@@ -4,8 +4,8 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from thermopi.exceptions import FailedToGetState
 from thermopi import SwitchOff
+from thermopi.exceptions import FailedToGetState
 
 
 @pytest.fixture

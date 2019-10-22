@@ -36,7 +36,7 @@ def crc_calc(data):
 
     Returns
     -------
-    int
+    bytearray
         CRC integer.
     """
 

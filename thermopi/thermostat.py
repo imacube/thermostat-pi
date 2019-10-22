@@ -30,6 +30,7 @@ class Thermostat:
 
         self.data_type_get_remote_state = bytearray([0x01])  # Get remote state data type
         self.data_type_send_state = bytearray([0x03])  # Send state date type
+        self.data_type_send_temperature = bytearray([0x10])  # Send temperature
 
     @staticmethod
     def gen_thermostat_msg(temp, heat, cool, fan):
@@ -126,8 +127,6 @@ class Thermostat:
             If there is a failure to send the data.
         """
 
-        result = None
-
         crc = crc_calc(data_to_send)
 
         settings_to_send = self.data_type_send_state + bytes(crc) + data_to_send
@@ -136,14 +135,12 @@ class Thermostat:
 
         return result
 
-    def send_temperature(self, temp_identifier: int, temperature: int, sensor_id: int, attempts: int,
+    def send_temperature(self, temperature: int, sensor_id: int, attempts: int,
                          retry_sleep: int):
         """Send a temperature to the thermostat.
 
         Parameters
         ----------
-        temp_identifier : int
-            Data packet identifier. Temperature data can have different values so this is not hard set.
         temperature : int
             Temperature data read from the temperature probe.
         sensor_id : int
@@ -166,7 +163,7 @@ class Thermostat:
 
         temp_data = bytearray([temperature, sensor_id])
 
-        temperature_to_send = bytearray([temp_identifier]) + crc_calc(temp_data) + temp_data
+        temperature_to_send = self.data_type_send_temperature + crc_calc(temp_data) + temp_data
 
         result = self.send(temperature_to_send, attempts, retry_sleep)
 
