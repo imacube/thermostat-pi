@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoTestManager">
     <enabled-run-configurations>
       <run-configuration type="tests" name="pytest for tests.test_switch_off.TestTurnOff" />
@@ -9,13 +12,19 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="Rewrote send logic into method used by others">
+    <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/thermostat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/thermostat.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_send_temperature.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_send_temperature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_set_thermostat.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_set_thermostat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_switch_off.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_switch_off.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermopi/crc.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/crc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermopi/thermostat.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/thermostat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewTemp.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewTemp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RequestState.py" beforeDir="false" afterPath="$PROJECT_DIR$/RequestState.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SendDataSample.py" beforeDir="false" afterPath="$PROJECT_DIR$/SendDataSample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SendUpdate.py" beforeDir="false" afterPath="$PROJECT_DIR$/SendUpdate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestTemp.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestTemp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurnOff.py" beforeDir="false" afterPath="$PROJECT_DIR$/TurnOff.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurnOn.py" beforeDir="false" afterPath="$PROJECT_DIR$/TurnOn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello.py" beforeDir="false" afterPath="$PROJECT_DIR$/hello.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +65,7 @@
     <property name="TODO_SCOPE" value="All Places" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/thermopi" />
     <property name="run.code.analysis.last.selected.profile" value="pThermostat" />
-    <property name="settings.editor.selected.configurable" value="project.scopes" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -437,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571717339955</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Minor adjustments with inspect">
+      <created>1571761074747</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1571761074747</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -454,7 +470,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PyCharm files" />
     <MESSAGE value="Initial example test&#10;&#10;Minor refactoring and PyCharm Inspect" />
     <MESSAGE value="Initial thermostat module with CRC calculation method" />
     <MESSAGE value="CRC calculation test" />
@@ -479,6 +494,7 @@
     <MESSAGE value="Simplified SwitchOff" />
     <MESSAGE value="Initial send temp code" />
     <MESSAGE value="Rewrote send logic into method used by others" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rewrote send logic into method used by others" />
+    <MESSAGE value="Minor adjustments with inspect" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor adjustments with inspect" />
   </component>
 </project>
