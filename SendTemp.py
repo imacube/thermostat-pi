@@ -38,9 +38,9 @@ def read_temp():
 
 
 def main():
-    print(" +--------------------------------------+")
-    print(" | XBee send temperature to thermostat  |")
-    print(" +--------------------------------------+\n")
+    # print(" +--------------------------------------+")
+    # print(" | XBee send temperature to thermostat  |")
+    # print(" +--------------------------------------+\n")
 
     device = XBeeDevice(PORT, BAUD_RATE)
 
@@ -60,11 +60,11 @@ def main():
 
         temp_f = int(temp_f)
 
-        print('Temp: {}'.format(temp_f))
+        # print('Temp: {}'.format(temp_f))
 
         result = thermostat.send_temperature(temp_f, 0x10)
 
-        print('result: ', result)
+        # print('result: ', result)
 
     finally:
         if device is not None and device.is_open():
@@ -72,4 +72,6 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    while True:
+        main()
+        time.sleep(20)

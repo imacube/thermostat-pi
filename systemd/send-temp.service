@@ -1,0 +1,14 @@
+[Unit]
+Description=Send Temp
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u SendTemp.py
+WorkingDirectory=/home/pi/thermostat
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target

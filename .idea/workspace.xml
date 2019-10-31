@@ -13,18 +13,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/thermostat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/thermostat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SendTemp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/systemd/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/systemd/send-temp.service" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewTemp.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewTemp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RequestState.py" beforeDir="false" afterPath="$PROJECT_DIR$/RequestState.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SendDataSample.py" beforeDir="false" afterPath="$PROJECT_DIR$/SendDataSample.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SendUpdate.py" beforeDir="false" afterPath="$PROJECT_DIR$/SendUpdate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestTemp.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestTemp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurnOff.py" beforeDir="false" afterPath="$PROJECT_DIR$/TurnOff.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurnOn.py" beforeDir="false" afterPath="$PROJECT_DIR$/TurnOn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.py" beforeDir="false" afterPath="$PROJECT_DIR$/hello.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thermopi/thermostat.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/thermostat.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,18 +57,18 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/thermopi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pThermostat" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tests" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/thermopi" />
       <recent name="$PROJECT_DIR$/tests" />
-      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -453,8 +447,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571761074747</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Saving state before trying to get a POC working">
+      <created>1572536692768</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1572536692769</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.service" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -470,7 +474,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial example test&#10;&#10;Minor refactoring and PyCharm Inspect" />
     <MESSAGE value="Initial thermostat module with CRC calculation method" />
     <MESSAGE value="CRC calculation test" />
     <MESSAGE value="Updates to workspace.xml" />
@@ -495,6 +498,7 @@
     <MESSAGE value="Initial send temp code" />
     <MESSAGE value="Rewrote send logic into method used by others" />
     <MESSAGE value="Minor adjustments with inspect" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor adjustments with inspect" />
+    <MESSAGE value="Saving state before trying to get a POC working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Saving state before trying to get a POC working" />
   </component>
 </project>

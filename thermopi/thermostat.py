@@ -135,8 +135,8 @@ class Thermostat:
 
         return result
 
-    def send_temperature(self, temperature: int, sensor_id: int, attempts: int,
-                         retry_sleep: int):
+    def send_temperature(self, temperature: int, sensor_id: int, attempts: int = 10,
+                         retry_sleep: int = 7):
         """Send a temperature to the thermostat.
 
         Parameters
