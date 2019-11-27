@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="AutoTestManager">
+    <enabled-run-configurations>
+      <run-configuration type="tests" name="pytest for tests.test_switch_off.TestTurnOff" />
+      <run-configuration type="tests" name="pytest for tests.test_switch_off.TestTurnOff" />
+      <run-configuration type="tests" name="pytest for tests.test_switch_off.TestTurnOff" />
+      <run-configuration type="tests" name="pytest in tests" />
+    </enabled-run-configurations>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-    </list>
+    <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+        <option value="Python Stub" />
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -25,10 +43,26 @@
       </set>
     </option>
   </component>
+  <component name="NamedScopeManager">
+    <scope name="Exclude - Typo" pattern="!file[thermostat]:thermostat/.pytest_cache//*&amp;&amp;!file:.coverage&amp;&amp;!file[thermostat]:htmlcov//*&amp;&amp;!file:requirements.txt&amp;&amp;!file[thermostat]:.pytest_cache//*&amp;&amp;!file[thermostat]:tests/.pytest_cache//*" />
+  </component>
   <component name="ProjectId" id="1ROikzazV92ZHRIqjWxL2WZNCrc" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../environment-sensors" />
+    <property name="run.code.analysis.last.selected.profile" value="pThermostat" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/thermopi" />
+      <recent name="$PROJECT_DIR$/tests" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -41,6 +75,107 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Python tests.pytest in tests">
+    <configuration name="pytest for tests.test_switch_off.TestTurnOff" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="thermostat" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_switch_off.TestTurnOff&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for tests.test_switch_off.TestTurnOff" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="thermostat" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_switch_off.TestTurnOff&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for tests.test_switch_off.TestTurnOff" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="thermostat" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_switch_off.TestTurnOff&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for tests.test_switch_off.TestTurnOff" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="thermostat" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_switch_off.TestTurnOff&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for tests.test_switch_on_off.TestTurnOff.test_heat_and_cool" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="thermostat" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;test_heat_and_cool&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_switch_on_off.TestTurnOff.test_heat_and_cool&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in tests" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="thermostat" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest in tests" />
+        <item itemvalue="Python tests.pytest for tests.test_switch_on_off.TestTurnOff.test_heat_and_cool" />
+        <item itemvalue="Python tests.pytest for tests.test_switch_off.TestTurnOff" />
+        <item itemvalue="Python tests.pytest in tests" />
+        <item itemvalue="Python tests.pytest for tests.test_switch_off.TestTurnOff" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -60,8 +195,270 @@
       <option name="project" value="LOCAL" />
       <updated>1569545152145</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changelog and PyCharm files">
+      <created>1569545605249</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569545605249</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Reformated and updated changelog">
+      <created>1569545898214</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1569545898214</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Updates to get requirements.txt contents installed">
+      <created>1569546612341</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569546612341</updated>
+    </task>
+    <task id="LOCAL-00005" summary="PyCharm inspection refactoring">
+      <created>1569554176936</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569554176936</updated>
+    </task>
+    <task id="LOCAL-00006" summary="PyCharm files">
+      <created>1569554285307</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569554285307</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Initial example test&#10;&#10;Minor refactoring and PyCharm Inspect">
+      <created>1569555344265</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1569555344265</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Initial thermostat module with CRC calculation method">
+      <created>1569555810591</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569555810591</updated>
+    </task>
+    <task id="LOCAL-00009" summary="CRC calculation test">
+      <created>1569606486517</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569606486517</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Updates to workspace.xml">
+      <created>1569982452777</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569982452777</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Initial test and Thermostat.get_remote_state&#10;&#10;More work is needed on the tests for this method.">
+      <created>1570034036556</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570034036556</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Initial test and Thermostat.get_remote_state&#10;&#10;More work is needed on the tests for this method.">
+      <created>1570224634340</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1570224634340</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Initial test and Thermostat.get_remote_state&#10;&#10;More work is needed on the tests for this method.">
+      <created>1570225394604</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1570225394604</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Additional tests for Thermostat.get_remote_state">
+      <created>1570225868544</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1570225868544</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Additional tests for Thermostat.get_remote_state">
+      <created>1570226069130</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1570226069130</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Renamed module to thermopi">
+      <created>1570227712491</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1570227712491</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Current state from when last worked on">
+      <created>1570468064512</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1570468064512</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Moved tests into tests directory">
+      <created>1570468133423</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1570468133423</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Updated load_config to use current yaml.load options">
+      <created>1570468196956</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1570468196956</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Many changes, still a work in progress">
+      <created>1570939101433</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1570939101433</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Basics of off method working and tested">
+      <created>1570999531723</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1570999531723</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Using new exception in get_remote_state">
+      <created>1570999744904</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1570999744904</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Fixed tests so they work with new code changes">
+      <created>1570999849579</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1570999849579</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Dropped open/close from core thermostat methods">
+      <created>1571000065219</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1571000065219</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Changes after inspect run">
+      <created>1571002822564</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1571002822564</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Added method to generate thermostat message">
+      <created>1571003600269</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1571003600269</updated>
+    </task>
+    <task id="LOCAL-00027" summary="SwitchOnOff now only SwitchOff">
+      <created>1571006900541</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1571006900541</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Further renaming by SwitchOnOff to SwitchOff">
+      <created>1571007033014</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1571007033014</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Making SwitchOff available directly">
+      <created>1571007115879</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1571007115879</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Dedicated set state class">
+      <created>1571026962238</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1571026962238</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Simplified SwitchOff">
+      <created>1571027076980</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1571027076980</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Initial send temp code">
+      <created>1571620552522</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1571620552522</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Initial send temp code">
+      <created>1571620560570</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1571620560570</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Rewrote send logic into method used by others">
+      <created>1571717333339</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1571717333339</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Rewrote send logic into method used by others">
+      <created>1571717339955</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1571717339955</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Minor adjustments with inspect">
+      <created>1571761074747</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1571761074747</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Saving state before trying to get a POC working">
+      <created>1572536692768</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1572536692769</updated>
+    </task>
+    <task id="LOCAL-00038" summary="While more a POC it does work as a systemd service">
+      <created>1572558026006</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1572558026006</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.service" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -77,7 +474,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PyCharm files" />
-    <option name="LAST_COMMIT_MESSAGE" value="PyCharm files" />
+    <MESSAGE value="CRC calculation test" />
+    <MESSAGE value="Updates to workspace.xml" />
+    <MESSAGE value="Initial test and Thermostat.get_remote_state&#10;&#10;More work is needed on the tests for this method." />
+    <MESSAGE value="Additional tests for Thermostat.get_remote_state" />
+    <MESSAGE value="Renamed module to thermopi" />
+    <MESSAGE value="Current state from when last worked on" />
+    <MESSAGE value="Moved tests into tests directory" />
+    <MESSAGE value="Updated load_config to use current yaml.load options" />
+    <MESSAGE value="Many changes, still a work in progress" />
+    <MESSAGE value="Basics of off method working and tested" />
+    <MESSAGE value="Using new exception in get_remote_state" />
+    <MESSAGE value="Fixed tests so they work with new code changes" />
+    <MESSAGE value="Dropped open/close from core thermostat methods" />
+    <MESSAGE value="Changes after inspect run" />
+    <MESSAGE value="Added method to generate thermostat message" />
+    <MESSAGE value="SwitchOnOff now only SwitchOff" />
+    <MESSAGE value="Further renaming by SwitchOnOff to SwitchOff" />
+    <MESSAGE value="Making SwitchOff available directly" />
+    <MESSAGE value="Dedicated set state class" />
+    <MESSAGE value="Simplified SwitchOff" />
+    <MESSAGE value="Initial send temp code" />
+    <MESSAGE value="Rewrote send logic into method used by others" />
+    <MESSAGE value="Minor adjustments with inspect" />
+    <MESSAGE value="Saving state before trying to get a POC working" />
+    <MESSAGE value="While more a POC it does work as a systemd service" />
+    <option name="LAST_COMMIT_MESSAGE" value="While more a POC it does work as a systemd service" />
   </component>
 </project>

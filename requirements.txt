@@ -1,1 +1,4 @@
 digi-xbee
+pytest-cov
+pytest
+pyyaml
