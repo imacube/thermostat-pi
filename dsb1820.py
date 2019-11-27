@@ -1,39 +1,3 @@
-# Packages
-
-```shell
-sudo apt install tmux vim rabbitmq-server
-```
-
-# Python
-
-```shell
-pip install -r requirements.txt --upgrade
-```
-
-# RabbitMQ
-
-```shell
-sudo rabbitmq-plugins enable rabbitmq_management
-sudo rabbitmqctl add_user admin admin
-sudo rabbitmqctl set_user_tags admin administrator
-```
-
-# Testing
-
-Generate a convergence report.
-
-```shell script
-pytest --cov-report=html --cov=thermopi
-```
-
-# Example reading from a dsb1820
-
-```
-89 01 4b 46 7f ff 0c 10 0e : crc=0e YES
-89 01 4b 46 7f ff 0c 10 0e t=24562
-```
-
-```python
 import glob
 import time
 
@@ -62,4 +26,3 @@ def read_temp():
 while True:
     print(read_temp())
     time.sleep(1)
-```

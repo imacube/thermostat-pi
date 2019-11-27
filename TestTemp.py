@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 
-from time import sleep
-
-from digi.xbee.devices import XBeeDevice
-from digi.xbee.exception import TimeoutException
-
 """
 Send state:
   struct settingsStruct {
@@ -29,11 +24,16 @@ Receive state:
 } thermostat_struct;
 """
 
+from time import sleep
+
+from digi.xbee.devices import XBeeDevice
+from digi.xbee.exception import TimeoutException
+
 PORT = "/dev/ttyUSB0"
 BAUD_RATE = 9600
 
 REMOTE_STATE_REQUEST = bytearray([0x01])
-SEND_STATE = bytearray([0x03])
+SEND_TEMP = bytearray([0x10])
 REMOTE_NODE_ID = "Thermostat"
 
 crc_table = [
@@ -61,9 +61,20 @@ crc_table = [
 
 
 def crc_calc(data):
-    # Calculate a CRC-8 of the object passed
-    #
-    # Source: https://www.maximintegrated.com/en/app-notes/index.mvp/id/27
+    """Calculate a CRC-8 of the object passed
+
+    Source: https://www.maximintegrated.com/en/app-notes/index.mvp/id/27
+
+    Parameters
+    ----------
+    data : bytearray
+        Binary data to calculate the CRC-8 for.
+
+    Returns
+    -------
+    int
+        CRC integer.
+    """
 
     crc = 0x0
 
@@ -147,36 +158,18 @@ def main():
             exit(1)
         data = xbee_message.data[1:]
 
-        current_temp = data[2]
+        print(data)
 
-        cool = heat = fan_mode = 0  # Default, nothing on
-        temp_setting = 73
-
-        if current_temp >= 73:
-            cool = 1
-            temp_setting = 74
-        elif current_temp < 73:
-            heat = 1
-            temp_setting = 73
-
-        print('current_temp', current_temp)
-        print('temp_setting', temp_setting)
-        print('cool', cool)
-        print('heat', heat)
-        print('fan_mode', fan_mode)
-
-        # Values for array: temp_setting, heat, cool, fan_mode
-
-        settings_to_send = bytearray([temp_setting, heat, cool, fan_mode])
+        settings_to_send = bytearray([73, 0x10])
 
         crc = bytearray([crc_calc(settings_to_send)])
 
-        print('DATA_TYPE', SEND_STATE)
+        print('DATA_TYPE', SEND_TEMP)
         print('crc_calc', crc_calc(settings_to_send))
         print('crc', crc[0])
         print('settings_to_send', settings_to_send)
 
-        data_to_send = SEND_STATE + crc + settings_to_send
+        data_to_send = SEND_TEMP + crc + settings_to_send
 
         send_state(device, remote_device, data_to_send)
 

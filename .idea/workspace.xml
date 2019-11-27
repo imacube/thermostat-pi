@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoTestManager">
     <enabled-run-configurations>
       <run-configuration type="tests" name="pytest for tests.test_switch_off.TestTurnOff" />
       <run-configuration type="tests" name="pytest for tests.test_switch_off.TestTurnOff" />
-      <run-configuration type="tests" name="pytest in tests" />
       <run-configuration type="tests" name="pytest for tests.test_switch_off.TestTurnOff" />
+      <run-configuration type="tests" name="pytest in tests" />
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thermopi/switch_off.py" beforeDir="false" afterPath="$PROJECT_DIR$/thermopi/switch_off.py" afterDir="false" />
-    </list>
+    <list default="true" id="189b55c4-8a13-4bc3-99eb-7df074296ec1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,23 +44,24 @@
     </option>
   </component>
   <component name="NamedScopeManager">
-    <scope name="Exclude - Typo" pattern="!file[thermostat]:.pytest_cache//*&amp;&amp;!file[thermostat]:thermostat/.pytest_cache//*&amp;&amp;!file:.coverage&amp;&amp;!file[thermostat]:htmlcov//*&amp;&amp;!file:requirements.txt" />
+    <scope name="Exclude - Typo" pattern="!file[thermostat]:thermostat/.pytest_cache//*&amp;&amp;!file:.coverage&amp;&amp;!file[thermostat]:htmlcov//*&amp;&amp;!file:requirements.txt&amp;&amp;!file[thermostat]:.pytest_cache//*&amp;&amp;!file[thermostat]:tests/.pytest_cache//*" />
   </component>
   <component name="ProjectId" id="1ROikzazV92ZHRIqjWxL2WZNCrc" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../environment-sensors" />
     <property name="run.code.analysis.last.selected.profile" value="pThermostat" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/thermopi" />
       <recent name="$PROJECT_DIR$/tests" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests" />
-      <recent name="$PROJECT_DIR$/thermopi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -169,9 +170,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.pytest in tests" />
+        <item itemvalue="Python tests.pytest for tests.test_switch_on_off.TestTurnOff.test_heat_and_cool" />
         <item itemvalue="Python tests.pytest for tests.test_switch_off.TestTurnOff" />
-        <item itemvalue="Python tests.pytest for tests.test_switch_off.TestTurnOff" />
-        <item itemvalue="Python tests.pytest for tests.test_switch_off.TestTurnOff" />
+        <item itemvalue="Python tests.pytest in tests" />
         <item itemvalue="Python tests.pytest for tests.test_switch_off.TestTurnOff" />
       </list>
     </recent_temporary>
@@ -397,8 +398,67 @@
       <option name="project" value="LOCAL" />
       <updated>1571026962238</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Simplified SwitchOff">
+      <created>1571027076980</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1571027076980</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Initial send temp code">
+      <created>1571620552522</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1571620552522</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Initial send temp code">
+      <created>1571620560570</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1571620560570</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Rewrote send logic into method used by others">
+      <created>1571717333339</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1571717333339</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Rewrote send logic into method used by others">
+      <created>1571717339955</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1571717339955</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Minor adjustments with inspect">
+      <created>1571761074747</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1571761074747</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Saving state before trying to get a POC working">
+      <created>1572536692768</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1572536692769</updated>
+    </task>
+    <task id="LOCAL-00038" summary="While more a POC it does work as a systemd service">
+      <created>1572558026006</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1572558026006</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.service" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -414,12 +474,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Reformated and updated changelog" />
-    <MESSAGE value="Updates to get requirements.txt contents installed" />
-    <MESSAGE value="PyCharm inspection refactoring" />
-    <MESSAGE value="PyCharm files" />
-    <MESSAGE value="Initial example test&#10;&#10;Minor refactoring and PyCharm Inspect" />
-    <MESSAGE value="Initial thermostat module with CRC calculation method" />
     <MESSAGE value="CRC calculation test" />
     <MESSAGE value="Updates to workspace.xml" />
     <MESSAGE value="Initial test and Thermostat.get_remote_state&#10;&#10;More work is needed on the tests for this method." />
@@ -439,6 +493,12 @@
     <MESSAGE value="Further renaming by SwitchOnOff to SwitchOff" />
     <MESSAGE value="Making SwitchOff available directly" />
     <MESSAGE value="Dedicated set state class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dedicated set state class" />
+    <MESSAGE value="Simplified SwitchOff" />
+    <MESSAGE value="Initial send temp code" />
+    <MESSAGE value="Rewrote send logic into method used by others" />
+    <MESSAGE value="Minor adjustments with inspect" />
+    <MESSAGE value="Saving state before trying to get a POC working" />
+    <MESSAGE value="While more a POC it does work as a systemd service" />
+    <option name="LAST_COMMIT_MESSAGE" value="While more a POC it does work as a systemd service" />
   </component>
 </project>

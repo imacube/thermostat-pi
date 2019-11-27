@@ -106,7 +106,7 @@ class TestSetThermostat:
         with pytest.raises(FailedToGetState):
             set_thermostat.set_state(75, False, False, False)
 
-    def test_failed_to_update_state(selfself, mock_send_state, mock_get_remote_state, set_thermostat_objects):
+    def test_failed_to_update_state(self, mock_send_state, mock_get_remote_state, set_thermostat_objects):
         """Test for a FailedToUpdateState exception."""
 
         set_thermostat, mock_device, mock_remote_device = set_thermostat_objects
