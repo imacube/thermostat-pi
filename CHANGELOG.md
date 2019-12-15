@@ -6,6 +6,9 @@ and this project adheres to [Semantic Visioning](https://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Removed
+- A function that was used by one method to move variables into a bytearray. This overly complicated things.
+
 ## 0.5.0 - 2019-11-27
 
 ### Added
