@@ -61,7 +61,7 @@ class SetThermostat(Thermostat):
                 else:
                     temp_setting = temp
 
-                settings_to_send = self.gen_thermostat_msg(temp_setting, heat, cool, fan)
+                settings_to_send = bytearray([temp_setting, heat, cool, fan])
 
                 LOGGER.info('settings_to_send {}'.format(settings_to_send))
                 result = self.send_state(settings_to_send)
