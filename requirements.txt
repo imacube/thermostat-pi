@@ -2,3 +2,4 @@ digi-xbee
 pytest-cov
 pytest
 pyyaml
+adafruit-io

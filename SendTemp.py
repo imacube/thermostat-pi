@@ -3,7 +3,9 @@
 """Read and send a temperature to the thermostat."""
 import glob
 import time
+import json
 
+from Adafruit_IO import Client, Feed
 from digi.xbee.devices import XBeeDevice
 
 from thermopi import Thermostat
@@ -16,6 +18,12 @@ base_dir = '/sys/bus/w1/devices/'
 device_folder = glob.glob(base_dir + '28*')[0]
 device_file = device_folder + '/w1_slave'
 
+with open('adafruit_io.json') as fin:
+    adafruit_io = json.load(fin)
+
+ADAFRUIT_IO_USERNAME = adafruit_io['adafruit_io_username']
+ADAFRUIT_IO_KEY = adafruit_io['adafruit_io_key']
+FEED_ID = adafruit_io['adafruit_io_username']
 
 def read_temp_raw():
     f = open(device_file, 'r')
@@ -43,6 +51,8 @@ def main():
     # print(" +--------------------------------------+\n")
 
     device = XBeeDevice(PORT, BAUD_RATE)
+    aio = Client(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
+    feed = aio.feeds(FEED_ID)
 
     try:
         device.open()
@@ -61,6 +71,7 @@ def main():
         temp_f = int(temp_f)
 
         # print('Temp: {}'.format(temp_f))
+        aio.send(feed.key, str(temp_f))
 
         result = thermostat.send_temperature(temp_f, 0x10)
 
